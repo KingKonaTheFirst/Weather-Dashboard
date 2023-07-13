@@ -6,26 +6,41 @@
     <title>Weather Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
+  <!-- --------------------------------------------------------------------- -->
   <header>
-    <h1 class="gid-col-12 text-center bg-cyan-400 font-bold py-4 text-4x1">
+    <h1 class="gid-col-9 text-center bg-cyan-400 font-bold py-4 text-4x1">
       Weather Dashboard
     </h1>
   </header>
 
   <body>
     <div class="flex items-center">
-      <input id="input"
+      <input
+        id="input"
         class="px-4 py-2 rounded-l-lg focus:outline-none border focus:shadow-outline"
         type="text"
         placeholder="Input City..."
       />
       <button
-        class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-r-lg"
+        class="gid-col-3 bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-r-lg"
       >
-        Search
+        >
       </button>
+
+      <div class="col-span-2 border" id="weatherToday">
+        <h2 id="city-name"></h2>
+        <h3 id="current-date"></h3>
+        <img id="current-icon" />
+        <p class="label">Temperature:</p>
+        <p id="current-temp"></p>
+        <p class="label">Wind:</p>
+        <p id="current-wind"></p>
+        <p class="label">Humidity:</p>
+        <p id="current-humidity"></p>
+        <p class="label">UV Index:</p>
+        <p id="current-uvi"></p>
+      </div>
     </div>
-    <p>This is a paragraph of text.</p>
 
     <!-- Add your HTML content here -->
   </body>
