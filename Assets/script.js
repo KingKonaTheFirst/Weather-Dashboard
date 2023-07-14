@@ -21,7 +21,28 @@ var entry = document.createElement("li");
 
 var previousSearch = {};
 
+var previousSearchContainer = document.getElementById("past-searches");
+
 // past search displays
-function clearSearch(){
-    var previousSearch
+function clearSearch() {
+  var previousSearch;
 }
+
+function previousSearchScreen() {
+  previousSearchContainer.textContent = "";
+  for (var search in previousSearch) {
+    console.log(search);
+    var previousSearchButt = document.createElement("button");
+    previousSearchButt.setAttribute("content", search);
+
+  }
+}
+var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=${apiKey}&units=imperial`
+    fetch(apiUrl)
+      .then(function (response) {
+        //  Conditional for the the response.status.
+        if (response.status !== 200) {
+          // Place the response.status on the page.
+        }
+        return response.json();
+      })
